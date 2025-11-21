@@ -1,0 +1,44 @@
+
+<div class="page">
+  <h2 class="page-title">Анализ расходов</h2>
+
+  <div class="analysis-box">
+   
+    <div class="calendar-box">
+      <h3 class="sub-title">Период</h3>
+
+      <div class="calendar-double">
+       
+        <div class="month-block">
+          <div class="month-header">
+            <span id="m1-title"></span>
+          </div>
+          <div class="weekdays">
+            <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
+          </div>
+          <div id="m1-days" class="days-grid"></div>
+        </div>
+
+        
+        <div class="month-block">
+          <div class="month-header">
+            <span id="m2-title"></span>
+          </div>
+          <div class="weekdays">
+            <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
+          </div>
+          <div id="m2-days" class="days-grid"></div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="analysis-info">
+      <div id="period-title" class="analysis-period-title">
+        Выберите дату в календаре (неделя будет рассчитана автоматически)
+      </div>
+
+      <canvas id="period-chart" height="220"></canvas>
+    </div>
+  </div>
+</div>

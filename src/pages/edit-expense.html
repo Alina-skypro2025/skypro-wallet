@@ -1,0 +1,41 @@
+<div class="page">
+  <h2 class="page-title">Редактировать расход</h2>
+
+  <div class="expense-form">
+
+    
+    <div class="input">
+      <label>Описание</label>
+      <input id="exp-desc" type="text" placeholder="Введите описание" />
+    </div>
+
+   
+    <div class="input">
+      <label>Категория</label>
+      <div class="categories">
+        <label><input type="radio" name="exp-cat" value="Еда" /> Еда</label>
+        <label><input type="radio" name="exp-cat" value="Транспорт" /> Транспорт</label>
+        <label><input type="radio" name="exp-cat" value="Жильё" /> Жильё</label>
+        <label><input type="radio" name="exp-cat" value="Развлечения" /> Развлечения</label>
+        <label><input type="radio" name="exp-cat" value="Образование" /> Образование</label>
+        <label><input type="radio" name="exp-cat" value="Другое" /> Другое</label>
+      </div>
+    </div>
+
+  
+    <div class="input">
+      <label>Дата</label>
+      <input id="exp-date" type="date" />
+    </div>
+
+   
+    <div class="input">
+      <label>Сумма</label>
+      <input id="exp-amount" type="number" placeholder="Введите сумму" />
+    </div>
+
+    
+    <button class="button" id="btn-update-expense">Сохранить изменения</button>
+
+  </div>
+</div>

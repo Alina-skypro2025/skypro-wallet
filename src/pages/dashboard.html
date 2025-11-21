@@ -1,0 +1,94 @@
+<div class="page">
+  <h2 class="page-title">Мои расходы</h2>
+
+  
+  <div class="transactions-controls">
+    <div class="control-item">
+      <label>Категория</label>
+      <select id="filter-category">
+        <option value="all">Все категории</option>
+        <option value="Еда">Еда</option>
+        <option value="Транспорт">Транспорт</option>
+        <option value="Развлечения">Развлечения</option>
+        <option value="Жильё">Жильё</option>
+        <option value="Образование">Образование</option>
+        <option value="Другое">Другое</option>
+      </select>
+    </div>
+
+    <div class="control-item">
+      <label>Сортировка</label>
+      <select id="filter-sort">
+        <option value="none">Без сортировки</option>
+        <option value="date-new">Дата ↑ (новее)</option>
+        <option value="date-old">Дата ↓ (старее)</option>
+        <option value="sum-max">Сумма ↑ (дороже)</option>
+        <option value="sum-min">Сумма ↓ (дешевле)</option>
+      </select>
+    </div>
+
+    <button class="button" id="btn-apply">Применить</button>
+    <button class="button controls-reset" id="btn-reset">Сбросить</button>
+  </div>
+
+  
+  <div class="dashboard-flex">
+
+    
+    <div class="table-block">
+     <table class="transactions-table">
+  <thead>
+    <tr>
+      <th>Дата</th>
+      <th>Категория</th>
+      <th>Описание</th>
+      <th>Сумма</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody id="transactions-body"></tbody>
+</table>
+
+
+      <div id="no-transactions" class="empty-text" style="display:none;">
+        Пока нет ни одной транзакции.
+      </div>
+    </div>
+
+    
+    <div class="add-form">
+      <h3 class="page-title-small">Новый расход</h3>
+
+      <div class="input">
+        <label>Описание</label>
+        <input id="exp-desc" type="text" placeholder="Введите описание" />
+      </div>
+
+      <div class="input">
+        <label>Категория</label>
+        <div class="categories">
+          <label><input type="radio" name="exp-cat" value="Еда" /> Еда</label>
+          <label><input type="radio" name="exp-cat" value="Транспорт" /> Транспорт</label>
+          <label><input type="radio" name="exp-cat" value="Жильё" /> Жильё</label>
+          <label><input type="radio" name="exp-cat" value="Развлечения" /> Развлечения</label>
+          <label><input type="radio" name="exp-cat" value="Образование" /> Образование</label>
+          <label><input type="radio" name="exp-cat" value="Другое" /> Другое</label>
+        </div>
+      </div>
+
+      <div class="input">
+        <label>Дата</label>
+        <input id="exp-date" type="date" />
+      </div>
+
+      <div class="input">
+        <label>Сумма</label>
+        <input id="exp-amount" type="number" placeholder="Введите сумму" />
+      </div>
+
+      <button class="button" id="btn-save-expense">Добавить новый расход</button>
+    </div>
+
+  </div>
+</div>
