@@ -1,17 +1,91 @@
-# React + Vite
+ SkyproWallet
+Приложение для учёта личных расходов.
+Позволяет добавлять, просматривать, анализировать и удалять расходы, а также выбирать период для анализа с помощью встроенного календаря.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ Функциональность проекта
 
-Currently, two official plugins are available:
+1. Авторизация и регистрация
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2.Авторизация по токену
 
-## React Compiler
+3.Хранение токена в localStorage
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+4.Выход из приложения с очисткой токена
 
-## Expanding the ESLint configuration
+5.Защита маршрутов — без токена доступ запрещён
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ Управление расходами
 
+1.Добавление нового расхода
+
+2.Указание категории, суммы, даты и описания
+
+3.Вывод таблицы расходов
+
+4.Удаление расхода (с подтверждением)
+
+5.Автоматическое обновление списка
+
+6. Аналитика расходов
+
+Интерфейс полностью соответствует макету
+
+Календарь выбора периода
+
+Гистограмма по категориям
+
+Автоматический пересчёт сумм
+
+Подсветка выбранного периода
+
+ Интерфейс и UX
+
+Полностью сверстано по макету
+
+Аккуратные карточки, тени, расстояния
+
+Единый стиль
+
+Продуманные элементы управления
+
+Удобное расположение форм и таблиц
+
+ Используемые технологии
+
+React
+
+React Router
+
+CSS (кастомная стилизация по макету)
+
+REST API
+
+localStorage
+
+JavaScript ES6+
+
+ Участники команды
+
+Проект выполнен одним разработчиком:
+
+Алина Гущина — полный цикл разработки:
+
+верстка всех страниц,
+
+реализация календаря,
+
+создание аналитики расходов,
+
+интеграция с API,
+
+авторизация и регистрация,
+
+удаление расходов,
+
+обработка ошибок,
+
+выстраивание структуры проекта,
+
+полная стилизация под макет,
+
+рефакторинг и очистка кода.
