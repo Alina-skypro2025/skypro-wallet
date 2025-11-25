@@ -3,27 +3,27 @@
 const CATEGORY_CONFIG = {
   food: {
     label: "Еда",
-    color: "linear-gradient(180deg, #c4b5fd 0%, #6366f1 100%)",
+    color: "#D9B6FF",
   },
   transport: {
     label: "Транспорт",
-    color: "linear-gradient(180deg, #facc15 0%, #f97316 100%)",
+    color: "#FFB53D",
   },
   housing: {
     label: "Жильё",
-    color: "linear-gradient(180deg, #6ee7b7 0%, #22c55e 100%)",
+    color: "#6EE4FE",
   },
   joy: {
     label: "Развлечения",
-    color: "linear-gradient(180deg, #a5b4fc 0%, #6366f1 100%)",
+    color: "#B0AEFF",
   },
   education: {
     label: "Образование",
-    color: "linear-gradient(180deg, #bef264 0%, #a3e635 100%)",
+    color: "#BCEC30",
   },
   others: {
     label: "Другое",
-    color: "linear-gradient(180deg, #fecaca 0%, #fb7185 100%)",
+    color: "#FFB9B8",
   },
 };
 
@@ -80,7 +80,8 @@ export default function AnalysisChart({ transactions, startDate, endDate }) {
   const total = values.reduce((a, b) => a + b, 0);
 
   const max = Math.max(...values, 1);
-  const maxHeight = 220; // высота столбца в пикселях
+  
+  const maxHeight = 220; 
 
   return (
     <div className="analysis-chart-card card">
@@ -105,7 +106,12 @@ export default function AnalysisChart({ transactions, startDate, endDate }) {
             <div key={key} className="analysis-bar">
               <div
                 className="analysis-bar-column"
-                style={{ height: `${height}px`, background: cfg.color }}
+                style={{
+    height: `${height}px`,
+    background: cfg.color,
+    width: "48px",       
+    borderRadius: "12px" 
+  }}
               >
                 <div className="analysis-bar-value">
                   {sum > 0 ? formatCurrency(sum) : "0 ₽"}
