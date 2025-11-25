@@ -80,7 +80,7 @@ export default function AnalysisChart({ transactions, startDate, endDate }) {
   const total = values.reduce((a, b) => a + b, 0);
 
   const max = Math.max(...values, 1);
-  const maxHeight = 220; // высота столбца в пикселях
+  const maxHeight = 220; 
 
   return (
     <div className="analysis-chart-card card">
