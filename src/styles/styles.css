@@ -20,14 +20,11 @@ body {
   background: linear-gradient(180deg, #f3f4ff 0%, #ffffff 100%);
 }
 
-
-
 .app-shell {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
 
 
 .app-header {
@@ -134,33 +131,16 @@ body {
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
 }
 
-.card--wide {
-  min-height: 420px;
-}
 
-.card--form {
-  min-width: 320px;
-}
 
 .card-title {
   margin: 0 0 20px;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
+  font-style: bold;
 }
 
-.card-placeholder {
-  font-size: 14px;
-  color: #6b7280;
-}
 
-.card-error {
-  margin-top: 8px;
-  padding: 10px 12px;
-  border-radius: 10px;
-  background: #fee2e2;
-  color: #b91c1c;
-  font-size: 13px;
-}
 
 
 
@@ -277,13 +257,14 @@ body {
 }
 
 .auth-card {
-  width: 380px;
-  max-width: 100%;
-  background: #ffffff;
-  padding: 32px 32px 28px;
-  border-radius: 24px;
-  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.12);
-  text-align: left;
+   width: 379px;
+  height: 385px; 
+  padding: 16px;
+  border-radius: 30px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
 }
 
 .auth-logo {
@@ -297,9 +278,10 @@ body {
 }
 
 .auth-title {
-  margin: 0 0 8px;
-  font-size: 24px;
-  font-weight: 600;
+  margin: 0 0 20px;
+  font-size: 22px;     
+  font-weight: 700;     
+  text-align: center; 
 }
 
 .auth-subtitle {
@@ -316,7 +298,8 @@ body {
 
 .auth-input {
   width: 100%;
-  padding: 10px 12px;
+  padding: 8px 16px;
+  height: 40px;
   border-radius: 12px;
   border: 1px solid #e5e7eb;
   font-size: 14px;
@@ -332,7 +315,7 @@ body {
   margin-top: 8px;
   width: 100%;
   padding: 12px 16px;
-  border-radius: 999px;
+  border-radius: 12px;
   border: none;
   background: #6b4eff;
   color: #ffffff;
@@ -356,9 +339,10 @@ body {
 }
 
 .auth-bottom-text {
-  margin-top: 16px;
+  margin-top: 12px;        
   font-size: 13px;
   color: #6b7280;
+  text-align: center;  
 }
 
 .auth-link,
@@ -369,6 +353,15 @@ body {
 
 .auth-link:hover,
 .link:hover {
+  text-decoration: underline;
+}
+.auth-link {
+  color: #6b4eff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link:hover {
   text-decoration: underline;
 }
 
@@ -397,8 +390,21 @@ body {
 .expenses-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 14px;
+  font-size: 16px;
 }
+
+.expenses-table td {
+  font-size: 12px;
+  color: #4b5563; 
+}
+
+
+.expenses-table th {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937; 
+}
+
 
 .expenses-table th,
 .expenses-table td {
@@ -467,15 +473,6 @@ body {
 }
 
 
-
-.analysis-grid {
-  margin-top: 12px;
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1.4fr);
-  gap: 28px;
-  align-items: stretch;
-}
-
 .analysis-period-card {
   align-self: flex-start;
 }
@@ -485,11 +482,6 @@ body {
   flex-direction: column;
   gap: 14px;
 }
-
-.analysis-chart-card {
-  min-height: 360px;
-}
-
 
 
 @media (max-width: 960px) {
@@ -557,45 +549,7 @@ body {
   gap: 8px;
 }
 
-.calendar-day {
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  border: none;
-  background: #f3f4f6;
-  cursor: pointer;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease,
-    transform 0.1s ease;
-}
 
-.calendar-day:hover {
-  background: #e5e7eb;
-  transform: translateY(-1px);
-}
-
-.calendar-day--selected {
-  background: #6b4eff;
-  color: #ffffff;
-  box-shadow: 0 8px 18px rgba(88, 80, 236, 0.45);
-}
-
-.calendar-day--in-range {
-  background: #e0e7ff;
-  color: #4f46e5;
-}
-
-
-.analysis-chart-card {
-  padding: 32px;
-  border-radius: 24px;
-  background: #fff;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-  min-height: 380px;
-}
 
 .analysis-chart-header {
   margin-bottom: 32px;
@@ -612,25 +566,7 @@ body {
   margin-top: 4px;
 }
 
-.analysis-chart-bars {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 32px;
-  height: 220px;
-}
 
-.analysis-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 60px;
-}
-
-.analysis-bar-column {
-  
-  transition: height 0.3s ease-in-out;
-}
 
 .analysis-bar-value {
   font-size: 13px;
@@ -690,48 +626,18 @@ body {
   text-overflow: ellipsis;
 }
 
-.calendar-day {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  border: none;
-  background: #F5F4FB; 
-  color: #1C1C1C;
-  transition: all 0.2s ease;
-}
-
 
 .calendar-day:hover {
   background: #e2e0f3;
 }
 
 
-.calendar-day--selected {
-  background: rgba(144, 88, 255, 0.25); 
-  color: #6B3CF8;                      
-  font-weight: 600;
-}
-
-
-.calendar-day--in-range {
-  background: rgba(144, 88, 255, 0.12);
-}
-.analysis-chart-card,
-.analysis-period-card {
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
-  padding: 24px;
-  background: #fff;
-}
 .analysis-grid {
+ margin-top: 12px;
   display: grid;
   grid-template-columns: 380px 1fr;
-  align-items: stretch;
   gap: 32px;
+  align-items: stretch;
 }
 
 .analysis-period-card,
@@ -743,34 +649,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.analysis-bar-column {
-  width: 64px;
-  border-radius: 12px;
-}
 
-.analysis-chart-bars {
-  gap: 48px;
-  height: 340px; 
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 48px;
-}
-.calendar-day--selected {
-  background: #f2e8ff !important;
-  color: #7c3aed !important;
-  font-weight: 600;
-}
-
-.calendar-day {
-  background: #f6f6f8;
-  color: #333;
-}
-.calendar-months {
-  max-height: 540px;
-  overflow-y: auto;
-  padding-right: 6px;
-}
 
 .calendar-months::-webkit-scrollbar {
   width: 6px;
@@ -784,7 +663,7 @@ body {
 
 
 .analysis-period-card {
-  height: 540px !important;
+  height: 540px;
   padding: 24px;
 }
 
@@ -795,52 +674,61 @@ body {
 }
 
 .calendar-day {
-  width: 38px !important;
-  height: 38px !important;
-  background: #f5f5fa !important;
-  color: #1a1a1a !important;
-  border-radius: 50% !important;
+  width: 38px;
+  height: 38px;
+  background: #f5f5fa;
+  color: #1a1a1a;
+  border-radius: 50%;
   transition: all 0.15s ease;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border: none;
+  background: #F5F4FB; 
+  color: #1C1C1C;
+  transition: all 0.2s ease;
 }
 
 .calendar-day--selected {
-  background: rgba(124, 58, 237, 0.18) !important;
-  color: #6b3cf8 !important;
-  font-weight: 600 !important;
-  box-shadow: none !important;
+  background: rgba(124, 58, 237, 0.18)t;
+  color: #6b3cf8;
+  font-weight: 600;
+  box-shadow: none;
 }
 
 .calendar-day--in-range {
-  background: rgba(124, 58, 237, 0.1) !important;
+  background: rgba(124, 58, 237, 0.1);
 }
 
 
 .analysis-chart-card {
-  height: 540px !important;
+  height: 540px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px 32px !important;
+  padding: 24px 32px;
 }
 
 .analysis-chart-bars {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  height: 360px !important;
-  gap: 40px !important;
+  height: 360px;
+  gap: 40px;
 }
 
 .analysis-bar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100px !important; 
+  width: 100px; 
 }
 
 .analysis-bar-column {
-  width: 90px !important;  
-  border-radius: 14px !important;
+ width: 90px;  
+  border-radius: 14px;
   transition: height 0.25s ease-in-out;
 }
 
@@ -852,7 +740,9 @@ body {
 }
 
 
-.analysis-grid {
-  grid-template-columns: 380px 1fr !important;
-  align-items: stretch !important;
+
+.expenses-grid .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }

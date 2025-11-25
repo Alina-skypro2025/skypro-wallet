@@ -34,10 +34,7 @@ export default function LoginPage() {
 
   return (
     <div className="auth-page">
-      <header className="auth-top-logo">
-        <span className="auth-logo-icon">💰</span>
-        <span>Skypro.Wallet</span>
-      </header>
+      
 
       <div className="auth-card">
         <h1 className="auth-title">Вход</h1>
