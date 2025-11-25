@@ -628,8 +628,7 @@ body {
 }
 
 .analysis-bar-column {
-  width: 46px;
-  border-radius: 18px 18px 6px 6px;
+  
   transition: height 0.3s ease-in-out;
 }
 
@@ -644,4 +643,216 @@ body {
   font-size: 13px;
   text-align: center;
   color: #444;
+}
+
+
+.expenses-table-wrapper {
+  overflow-x: auto;
+}
+
+.expenses-table {
+  table-layout: fixed; 
+  width: 100%;
+}
+
+
+.expenses-table td:first-child {
+  max-width: 260px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.expenses-table td:nth-child(2) {
+  width: 120px;
+}
+
+
+.expenses-table td:nth-child(3) {
+  width: 120px;
+}
+
+
+.expenses-table-sum-cell {
+  width: 100px;
+  white-space: nowrap;
+}
+
+
+.expenses-table-actions {
+  width: 40px;
+  text-align: center;
+}
+
+.expenses-table td:first-child {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calendar-day {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border: none;
+  background: #F5F4FB; 
+  color: #1C1C1C;
+  transition: all 0.2s ease;
+}
+
+
+.calendar-day:hover {
+  background: #e2e0f3;
+}
+
+
+.calendar-day--selected {
+  background: rgba(144, 88, 255, 0.25); 
+  color: #6B3CF8;                      
+  font-weight: 600;
+}
+
+
+.calendar-day--in-range {
+  background: rgba(144, 88, 255, 0.12);
+}
+.analysis-chart-card,
+.analysis-period-card {
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  background: #fff;
+}
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  align-items: stretch;
+  gap: 32px;
+}
+
+.analysis-period-card,
+.analysis-chart-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 540px;   
+  display: flex;
+  flex-direction: column;
+}
+.analysis-bar-column {
+  width: 64px;
+  border-radius: 12px;
+}
+
+.analysis-chart-bars {
+  gap: 48px;
+  height: 340px; 
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+}
+.calendar-day--selected {
+  background: #f2e8ff !important;
+  color: #7c3aed !important;
+  font-weight: 600;
+}
+
+.calendar-day {
+  background: #f6f6f8;
+  color: #333;
+}
+.calendar-months {
+  max-height: 540px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.calendar-months::-webkit-scrollbar {
+  width: 6px;
+}
+
+.calendar-months::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 6px;
+}
+
+
+
+.analysis-period-card {
+  height: 540px !important;
+  padding: 24px;
+}
+
+.calendar-months {
+  max-height: 360px; 
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.calendar-day {
+  width: 38px !important;
+  height: 38px !important;
+  background: #f5f5fa !important;
+  color: #1a1a1a !important;
+  border-radius: 50% !important;
+  transition: all 0.15s ease;
+}
+
+.calendar-day--selected {
+  background: rgba(124, 58, 237, 0.18) !important;
+  color: #6b3cf8 !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
+.calendar-day--in-range {
+  background: rgba(124, 58, 237, 0.1) !important;
+}
+
+
+.analysis-chart-card {
+  height: 540px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 32px !important;
+}
+
+.analysis-chart-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 360px !important;
+  gap: 40px !important;
+}
+
+.analysis-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px !important; 
+}
+
+.analysis-bar-column {
+  width: 90px !important;  
+  border-radius: 14px !important;
+  transition: height 0.25s ease-in-out;
+}
+
+.analysis-bar-value {
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000;
+}
+
+
+.analysis-grid {
+  grid-template-columns: 380px 1fr !important;
+  align-items: stretch !important;
 }

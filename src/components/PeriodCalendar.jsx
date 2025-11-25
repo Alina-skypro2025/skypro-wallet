@@ -63,16 +63,17 @@ export default function PeriodCalendar({
   const baseYear = today.getFullYear();
   const baseMonth = today.getMonth(); 
 
-  const months = useMemo(
-    () => [
-      buildMonth(baseYear, baseMonth),
-      buildMonth(
-        baseMonth === 11 ? baseYear + 1 : baseYear,
-        (baseMonth + 1) % 12
-      ),
-    ],
-    [baseYear, baseMonth]
-  );
+  const months = useMemo(() => {
+  return [
+    buildMonth(baseYear, 7),  // Август
+    buildMonth(baseYear, 8),  // Сентябрь
+    buildMonth(baseYear, 9),  // Октябрь
+    buildMonth(baseYear, 10), // Ноябрь
+    buildMonth(baseYear, 11), // Декабрь
+    buildMonth(baseYear + 1, 0), // Январь
+    buildMonth(baseYear + 1, 1), // Февраль
+  ];
+}, [baseYear]);
 
   function handleDayClick(date) {
     const day = startOfDay(date);
